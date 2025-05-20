@@ -1,0 +1,34 @@
+@Component - An instance of class will be managed by Spring Framework
+Component Scan - Used to point Spring Framework where your components are
+Dependency Injection - Identify beans, their dependencies and wire them together
+    (provides IOC [Inversion of Control])
+Spring Beans - An object managed by Spring Framework
+IoC Container - Manages lifecycle of beans and dependencies
+   Types - ApplicationContext (Complex)
+           BeanFactory (Simpler features)
+Autowiring - Process of wiring in dependencies for Spring Bean
+
+
+                 @Component                      vs  @Bean
+Where?           Can be used on any Java class   |    Used on methods in Spring Configuration classes
+EOU              Very easy, just add annotation  |    You write all the code
+Autowiring       Yes - Field, Setter or Cons     |    Yes - Method call or method Params
+Creates Beans    Spring Framework                |    You write bean creation code
+Recom For        Instantiating Beans             |    Custom Business Logic 3rd partied libraries
+
+Lazy -
+   Can be used almost everywhere @Component and @Bean are used
+   Lazy-resolution proxy will be injected instead of actual dependency
+   Can be used on Configuration class
+      All @Bean methods within @Configuration will be lazy
+
+Prototype - Stateful Bean (one per instance)
+Singleton - Stateless Bean (one for the entire IOC)
+
+Stereotype Annotations
+@Component - Generic annotation applicable for any class
+   Base for all Spring Stereotype Annotations
+   Specializations of @Component
+      @Service indicates that an annotated class has business logic
+      @Controller indicates that an annotated class is a "Controller" (e.g. a web controller)
+      @Repository indicates that an annotated class is used to retrieve and or manipulate data in db
