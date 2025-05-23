@@ -1,7 +1,5 @@
 package com.example.todo_app.models;
 
-import org.springframework.stereotype.Component;
-
 import java.time.LocalDate;
 
 public class Todo {

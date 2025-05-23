@@ -5,10 +5,12 @@ import com.example.todo_app.services.TodoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import java.util.List;
 
 @Controller
+@SessionAttributes("username")
 public class TodoController {
     private TodoService todoService;
 
