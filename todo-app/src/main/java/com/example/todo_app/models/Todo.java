@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
-@Component
 public class Todo {
     private int id;
     private String username;
