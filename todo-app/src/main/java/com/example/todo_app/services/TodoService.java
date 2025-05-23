@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@ComponentScan("com/example/todo_app/models")
 public class TodoService {
     private static List<Todo> todos = new ArrayList<>();
     static {
