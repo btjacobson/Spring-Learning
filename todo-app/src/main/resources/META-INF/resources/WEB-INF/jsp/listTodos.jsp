@@ -26,5 +26,6 @@
             </c:forEach>
          </tbody>
       </table>
+      <a href="add-todo">Add Todo</a>
    </body>
 </html>
