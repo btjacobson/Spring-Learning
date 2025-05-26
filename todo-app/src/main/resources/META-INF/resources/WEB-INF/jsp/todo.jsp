@@ -1,12 +1,16 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <html>
    <head>
       <title>New Todo Page</title>
    </head>
    <body>
       <h1>Enter Todo Details</h1>
-      <form method="post">
-         Description: <input type="text" name="description" required="required">
-         <input type="submit">
-      </form>
+      <form:form method="post" modelAttribute="todo">
+         Description: <form:input type="text" path="description" required="required"/>
+         <form:input type="hidden" path="id"/>
+         <form:input type="hidden" path="completed"/>
+         <input type="submit"/>
+      </form:form>
    </body>
 </html>
