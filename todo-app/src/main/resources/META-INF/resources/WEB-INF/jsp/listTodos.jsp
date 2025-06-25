@@ -14,6 +14,7 @@
                <th>Target Date</th>
                <th>Completed?</th>
                <th></th>
+               <th></th>
             </tr>
          </thead>
          <tbody>
@@ -24,8 +25,13 @@
                   <td>${todo.completeBy}</td>
                   <td>${todo.completed}</td>
                   <td>
+                     <a href="update-todo?id=${todo.id}">
+                        Update
+                     </a>
+                  </td>
+                  <td>
                      <a href="delete-todo?id=${todo.id}">
-                        DELETE
+                        Delete
                      </a>
                   </td>
                </tr>
