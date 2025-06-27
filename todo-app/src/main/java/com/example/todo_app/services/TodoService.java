@@ -20,7 +20,9 @@ public class TodoService {
     }
 
     public List<Todo> findTodosByUsername(String username) {
-        return todos;
+        Predicate<? super Todo> predicate = todo -> todo.getUsername().equalsIgnoreCase(username);
+
+        return todos.stream().filter(predicate).toList();
     }
 
     public void addTodo(String username, String description, LocalDate completeBy, boolean completed) {
@@ -34,6 +36,7 @@ public class TodoService {
 
     public Todo findTodo(int id) {
         Predicate<? super Todo> predicate = todo -> todo.getId() == id;
+
         return todos.stream().filter(predicate).findFirst().get();
     }
 
